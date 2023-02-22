@@ -1,7 +1,7 @@
 import streamlit as st
-import pandas as pd #อิ
-
-from sklearn.linear_model import LinearRegression
+import pandas as pd 
+#from sklearn.linear_model 
+import LinearRegression
 import joblib
 def load_save_data():
     return pd.read_excel('save.xlsx')
