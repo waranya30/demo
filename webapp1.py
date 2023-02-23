@@ -6,7 +6,7 @@ st.markdown(
     f"""
        <style>
        .stApp {{
-           background-image: url("https://wholesaletirescompany.com/wp-content/uploads/2020/06/hercules-tire-review.jpg");
+           background-image: url("https://tse3.mm.bing.net/th?id=OIP._OXhAL5Jn1qWwf2bzHMu3wHaDq&pid=Api&P=0");
            background-attachment: fixed;
            background-size: cover;
            /* opacity: 0.3; */
@@ -86,7 +86,7 @@ if predictb:
 def generate_save_data():
     pass
 def load_save_data():
-    return pd.read_excel('save.xlsx')
+    return pd.read_excel('p.xlsx')
 
 def save_model(model):
     joblib.dump(model, 'model.joblib')
