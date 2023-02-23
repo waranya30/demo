@@ -6,7 +6,7 @@ st.markdown(
     f"""
        <style>
        .stApp {{
-           background-image: url("https://img.lovepik.com/photo/50092/9685.jpg_wh860.jpg");
+           background-image: url("https://img.lovepik.com/photo/50076/9021.jpg_wh860.jpg");
            background-attachment: fixed;
            background-size: cover;
            /* opacity: 0.3; */
@@ -20,12 +20,12 @@ st.write('เว็บไซต์นี้นำเสนอรถยนต์�
 left, center,right = st.columns(3)
 if left:
     add_number = left.number_input(':violet[ราคารถที่ต้องการ]')
-if center:
-    add_band = center.selectbox(
+if right:
+    add_band = right.selectbox(
     ':violet[ยี่ห้อรถยนต์]',
     ('Toyota', 'Honda', 'Ford', 'Benz'))
 
-predictb = left.button('ประเมินราคา')
+predictb = center.button('ประเมินราคา')
 if predictb:
         if 500000 <= add_number <= 800000:
             df = pd.read_csv('model.csv')
