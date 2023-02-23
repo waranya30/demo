@@ -115,4 +115,5 @@ if trainb:
     model = LinearRegression()
     st.write('... done')
     st.dataframe(df)
+    st.write("autospinn.com")
     save_model(model)
