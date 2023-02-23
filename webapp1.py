@@ -15,7 +15,7 @@ st.markdown(
        """,
     unsafe_allow_html=True
 )
-st.title(':blue[Car Showroom]')
+st.title(':blue[Cars Showroom]')
 st.write('เว็บไซต์นี้นำเสนอรถยนต์ในเลทราคาที่ท่านต้องการ')
 left, center,right = st.columns(3)
 if left:
