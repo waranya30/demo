@@ -2,22 +2,19 @@ import streamlit as st
 import pandas as pd 
 from sklearn.linear_model  import LinearRegression
 import joblib
-import base64
-def add_bg_from_local(image_file):
-    with open(image_file, "rb") as image_file:
-     encoded_string = base64.b64encode(image_file.read())
-    st.markdown(
+st.markdown(
     f"""
-    <style>
-    .stApp {{
-        background-image: url(data:image/{"png"};base64,{encoded_string.decode()});
-        background-size: 150
-    }}
-    </style>
-    """,
+       <style>
+       .stApp {{
+           background-image: url("https://tse4.mm.bing.net/th?id=OIP.5c77MMGVVi-NsPr_a96L4AHaEo&pid=Api&P=0");
+           background-attachment: fixed;
+           background-size: cover;
+           /* opacity: 0.3; */
+       }}
+       </style>
+       """,
     unsafe_allow_html=True
-    )
-add_bg_from_local('cars.png')
+)
 st.title(':blue[Cars Showroom]')
 st.write('เว็บไซต์นี้นำเสนอรถยนต์ในเลทราคาที่ท่านต้องการ')
 left, center,right = st.columns(3)
