@@ -6,7 +6,7 @@ st.markdown(
     f"""
        <style>
        .stApp {{
-           background-image: url("https://tse3.mm.bing.net/th?id=OIP._OXhAL5Jn1qWwf2bzHMu3wHaDq&pid=Api&P=0");
+           background-image: url("https://img.lovepik.com/background/20211021/large/lovepik-car-road-posters-background-image_400164264.jpg");
            background-attachment: fixed;
            background-size: cover;
            /* opacity: 0.3; */
