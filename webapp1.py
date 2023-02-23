@@ -109,7 +109,7 @@ if loadb:
 trainb = right.button('Bands')
 if trainb:
     right.write('training model ...')
-    df = pd.read_excel('car.xlsx', index_col=0)
+    #df = pd.read_excel('car.xlsx', index_col=0)
     model = LinearRegression()
     right.write('... done')
     right.dataframe(df)
