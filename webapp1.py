@@ -25,7 +25,7 @@ if right:
     ':violet[ยี่ห้อรถยนต์]',
     ('Toyota', 'Honda', 'Ford', 'Benz'))
 
-predictb = center.button('ประเมินราคา')
+predictb = st.button('ประเมินราคา')
 if predictb:
         if 500000 <= add_number <= 800000:
             df = pd.read_csv('model.csv')
