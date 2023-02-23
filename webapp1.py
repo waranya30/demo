@@ -6,7 +6,7 @@ st.markdown(
     f"""
        <style>
        .stApp {{
-           background-image: url("https://tse4.mm.bing.net/th?id=OIP.5c77MMGVVi-NsPr_a96L4AHaEo&pid=Api&P=0");
+           background-image: url("https://wholesaletirescompany.com/wp-content/uploads/2020/06/hercules-tire-review.jpg");
            background-attachment: fixed;
            background-size: cover;
            /* opacity: 0.3; */
