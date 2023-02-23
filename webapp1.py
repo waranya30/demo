@@ -15,8 +15,9 @@ st.markdown(
        """,
     unsafe_allow_html=True
 )
-st.title(':blue[Cars Showroom]')
-st.write('เว็บไซต์นี้นำเสนอรถยนต์ในเลทราคาที่ท่านต้องการ')
+st.title("<h3 style='text-align: center; color: blue;'>Cars Showroom </h3>", unsafe_allow_html=True)
+#st.title(':blue[Cars Showroom]')
+center.write('เว็บไซต์นี้นำเสนอรถยนต์ในเลทราคาที่ท่านต้องการ')
 left, center,right = st.columns(3)
 if left:
     add_number = left.number_input(':violet[ราคารถที่ต้องการ]')
