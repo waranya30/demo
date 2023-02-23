@@ -2,19 +2,6 @@ import streamlit as st
 import pandas as pd 
 from sklearn.linear_model  import LinearRegression
 import joblib
-st.markdown(
-    f"""
-       <style>
-       .stApp {{
-           background-image: url("https://img.lovepik.com/background/20211021/large/lovepik-car-road-posters-background-image_400164264.jpg");
-           background-attachment: fixed;
-           background-size: cover;
-           /* opacity: 0.3; */
-       }}
-       </style>
-       """,
-    unsafe_allow_html=True
-)
 st.title(':blue[Cars Showroom]')
 st.write('เว็บไซต์นี้นำเสนอรถยนต์ในเลทราคาที่ท่านต้องการ')
 left, center,right = st.columns(3)
