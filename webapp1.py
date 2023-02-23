@@ -2,6 +2,19 @@ import streamlit as st
 import pandas as pd 
 from sklearn.linear_model  import LinearRegression
 import joblib
+st.markdown(
+    f"""
+       <style>
+       .stApp {{
+           background-image: url("https://img.lovepik.com/photo/40016/4270.jpg_wh860.jpg");
+           background-attachment: fixed;
+           background-size: cover;
+           /* opacity: 0.3; */
+       }}
+       </style>
+       """,
+    unsafe_allow_html=True
+)
 st.title(':blue[Cars Showroom]')
 st.write('เว็บไซต์นี้นำเสนอรถยนต์ในเลทราคาที่ท่านต้องการ')
 left, center,right = st.columns(3)
@@ -87,7 +100,7 @@ generateb = st.button('generate Automobile')
 if generateb:
     st.write('generating "Automobile" ...')
     generate_save_data()
-    right.write(' ... done')
+    st.write(' ... done')
 loadb = st.button('load Automobile')
 if loadb:
     st.write('loading "Automobile"')
