@@ -96,23 +96,23 @@ def load_model():
 def generate_save_data():
     pass
 
-generateb = right.button('generate car')
+generateb = st.button('generate Automobile')
 if generateb:
-    right.write('generating "car" ...')
+    st.write('generating "Automobile" ...')
     generate_save_data()
     right.write(' ... done')
-loadb = right.button('load car')
+loadb = st.button('load Automobile')
 if loadb:
-    right.write('loading "car"')
-    right.write('... done')
-    df = pd.read_excel('car.xlsx', index_col=0)
-    right.dataframe(df)
+    st.write('loading "Automobile"')
+    st.write('... done')
+    df = pd.read_excel('p.xlsx', index_col=0)
+    st.dataframe(df)
 
-trainb = right.button('Bands')
+trainb = st.button('Predict Automobile')
 if trainb:
-    right.write('training model ...')
-    df = pd.read_excel('car.xlsx', index_col=0)
+    st.write('แนวโน้มอุตสาหกรรมยายยนต์ไทยในปี 2566 ...')
+    df = pd.read_excel('p.xlsx', index_col=0)
     model = LinearRegression()
-    right.write('... done')
-    right.dataframe(df)
+    st.write('... done')
+    st.dataframe(df)
     save_model(model)
