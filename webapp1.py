@@ -2,16 +2,6 @@ import streamlit as st
 import pandas as pd 
 from sklearn.linear_model  import LinearRegression
 import joblib
-def load_save_data():
-    return pd.read_excel('save.xlsx')
-
-def save_model(model):
-    joblib.dump(model, 'model.joblib')
-
-def load_model():
-    return joblib.load('model.joblib')
-def generate_save_data():
-    pass
 st.markdown(
     f"""
        <style>
@@ -27,11 +17,11 @@ st.markdown(
 )
 st.title(':blue[Car Showroom]')
 st.write('เว็บไซต์นี้นำเสนอรถยนต์ในเลทราคาที่ท่านต้องการ')
-left, right,right2 = st.columns(3)
+left, center,right = st.columns(3)
 if left:
     add_number = left.number_input(':violet[ราคารถที่ต้องการ]')
-if right:
-    add_band = right.selectbox(
+if center:
+    add_band = center.selectbox(
     ':violet[ยี่ห้อรถยนต์]',
     ('Toyota', 'Honda', 'Ford', 'Benz'))
 
@@ -93,24 +83,34 @@ if predictb:
                     st.image('https://images-na.ssl-images-amazon.com/images/I/717X0B8fM2L._AC_SL1280_.jpg',width=600, caption='Benz Mercedes-AMG C 63 S Coupe (3,982 ซีซี) ราคา 10,129,000 บาท')
                     st.image('https://www.fudgenmore.com/wp-content/uploads/INKAS_Mercedes_Benz_G63_04-1.jpg',width=600, caption='Benz Mercedes-AMG G 63 (3,982 ซีซี) ราคา 16,300,000 บาท')
                     st.image('https://s.aolcdn.com/commerce/autodata/images/USD10MBCCM1A021001.jpg',width=600, caption='Benz Mercedes-Maybach S 580 4MATIC Premium (3,982 ซีซี) ราคา 18,300,000 บาท')
+def load_save_data():
+    return pd.read_excel('save.xlsx')
 
-generateb = right2.button('generate car')
+def save_model(model):
+    joblib.dump(model, 'model.joblib')
+
+def load_model():
+    return joblib.load('model.joblib')
+def generate_save_data():
+    pass
+
+generateb = right.button('generate car')
 if generateb:
-    right2.write('generating "car" ...')
+    right.write('generating "car" ...')
     generate_save_data()
-    right2.write(' ... done')
-loadb = right2.button('load car')
+    right.write(' ... done')
+loadb = right.button('load car')
 if loadb:
-    right2.write('loading "car"')
-    right2.write('... done')
+    right.write('loading "car"')
+    right.write('... done')
     df = pd.read_excel('car.xlsx', index_col=0)
-    right2.dataframe(df)
+    right.dataframe(df)
 
-trainb = right2.button('Bands')
+trainb = right.button('Bands')
 if trainb:
-    right2.write('training model ...')
+    right.write('training model ...')
     df = pd.read_excel('car.xlsx', index_col=0)
     model = LinearRegression()
-    right2.write('... done')
-    right2.dataframe(df)
+    right.write('... done')
+    right.dataframe(df)
     save_model(model)
